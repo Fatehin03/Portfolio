@@ -159,6 +159,22 @@ section { min-height:100vh; display:flex; flex-direction:column; justify-content
 .contact-text { font-size:28px; color:#e9d5ff; margin-bottom:20px;}
 .contact-subtext { font-size:18px; color:#c4b5fd; }
 
+/* ---------- NEW: Toggle animation hooks (kept separate so toggles can be applied via JS) ---------- */
+/* These are utility-style selectors that correspond to data-change attributes or classes.
+   Add the corresponding class (e.g. .toggle-rotate) or set data-change attributes from JS/HTML
+   to enable these animations/effects on elements without removing any existing features. */
+
+.toggle-rotate[data-change="rotate"] { animation: toggleRotate 1.2s linear infinite; transform-origin: center center; }
+.toggle-donut[data-change="donut-fill"] { animation: donutSpin 2s linear infinite; transform-origin: center center; }
+.toggle-lights[data-change="light"] { filter: brightness(2); }
+.toggle-glare[data-change="glare"] { backdrop-filter: blur(5px) brightness(1.5); }
+.toggle-sprinkles[data-change="sprinkles"] { animation: sprinklePop 1s ease-in-out infinite; }
+.toggle-pbp[data-change="pop"] { animation: popEffect 0.8s ease-in-out infinite; }
+.toggle-outlines[data-change="outlines"] { outline: 2px solid rgba(255,255,255,0.08); box-shadow: 0 0 0 2px rgba(167,139,250,0.06) inset; }
+
+/* You can also target these by attribute, for example:
+   [data-change="rotate"] { ... } if you prefer not to add classes. */
+
 /* Animations */
 @keyframes blob { 0%,100%{transform:translate(0,0) scale(1);} 25%{transform:translate(20px,-50px) scale(1.1);} 50%{transform:translate(-20px,20px) scale(0.9);} 75%{transform:translate(50px,50px) scale(1.05);} }
 @keyframes pulse { 0%,100%{opacity:1;}50%{opacity:0.5;} }
@@ -170,6 +186,33 @@ section { min-height:100vh; display:flex; flex-direction:column; justify-content
 @keyframes bounce { to{transform:translateY(-10px);} }
 @keyframes tagPop { to{opacity:1; transform:translateY(0);} }
 
+/* ---------- NEW: Additional keyframes for toggles ---------- */
+@keyframes toggleRotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes donutSpin {
+  0% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(180deg) scale(1.05); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+
+@keyframes sprinklePop {
+  0% { transform: translateY(0) scale(1); opacity: 1; }
+  25% { transform: translateY(-6px) scale(1.08); opacity: 0.9; }
+  50% { transform: translateY(0) scale(0.98); opacity: 0.6; }
+  75% { transform: translateY(-3px) scale(1.02); opacity: 0.85; }
+  100% { transform: translateY(0) scale(1); opacity: 1; }
+}
+
+@keyframes popEffect {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.25); }
+  60% { transform: scale(0.95); }
+  100% { transform: scale(1); }
+}
+
 /* Animation Classes */
 .animate-fade-in { opacity:0; animation:fadeIn 1s forwards; }
 .animate-slide-up { opacity:0; transform:translateY(50px); animation:slideUp 0.8s forwards; }
@@ -180,4 +223,10 @@ section { min-height:100vh; display:flex; flex-direction:column; justify-content
 .animate-hover-pop:hover { transform:scale(1.3); transition:all 0.3s; }
 
 /* Responsive */
-@media (max-width:768px){.hero-title{font-size:48px;}.section-title{font-size:36px;}.stats{flex-direction:column; gap:20px;}.skills-grid{grid-template-columns:1fr;}.nav{flex-wrap:wrap;}}
+@media (max-width:768px){
+  .hero-title{font-size:48px;}
+  .section-title{font-size:36px;}
+  .stats{flex-direction:column; gap:20px;}
+  .skills-grid{grid-template-columns:1fr;}
+  .nav{flex-wrap:wrap;}
+}
