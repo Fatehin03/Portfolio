@@ -126,11 +126,11 @@ sections.forEach(section => {
 
 
 /* ------------------------------
-   NEW FEATURE 2: Interactive 3D Card Tilt Effect
+   NEW FEATURE 2: Interactive 3D Card Tilt Effect (Now includes .social-card)
 --------------------------------*/
 
 const tiltCards = document.querySelectorAll(
-  '.hero-card, .stat-card, .project-card, .skill-card'
+  '.hero-card, .stat-card, .project-card, .skill-card, .social-card' // <-- .social-card added here
 );
 
 tiltCards.forEach(card => {
