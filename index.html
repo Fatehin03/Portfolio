@@ -30,7 +30,7 @@
   <nav>
     <button onclick="scrollToSection('hero')" class="nav-btn active">Home</button>
     <button onclick="scrollToSection('about')" class="nav-btn">About</button>
-    <button onclick="scrollToSection('projects')" class="nav-btn">Projects</button> <!-- NEW NAV LINK -->
+    <button onclick="scrollToSection('projects')" class="nav-btn">Projects</button>
     <button onclick="scrollToSection('skills')" class="nav-btn">Skills</button>
     <button onclick="scrollToSection('contact')" class="nav-btn">Contact</button>
   </nav>
@@ -64,18 +64,60 @@
           <div class="stat-label">⭐ Research</div>
         </div>
       </div>
+      
+      <!-- NEW: SOCIAL CARDS GRID - Links updated with user-provided URLs -->
+      <div class="social-cards-grid">
+        
+        <!-- GitHub Card -->
+        <a href="https://fatehin03.github.io" target="_blank" class="social-card animate-pop toggle-pbp" style="animation-delay: 0.6s;">
+          <i class="fab fa-github social-icon"></i>
+          <h3 class="social-title">GitHub</h3>
+          <p class="card-followers">
+            <span class="follower-count">80+</span> Repositories
+          </p>
+          <div class="follow-button">
+            <i class="fa-solid fa-code"></i> View Code
+          </div>
+        </a>
 
-      <!-- UPDATED SOCIAL LINKS: Using your provided handles and professional icons -->
-      <div class="social-links animate-fade-in toggle-outlines" style="animation-delay:0.6s">
-        <!-- 1. GitHub (Placeholder URL - IMPORTANT: Replace this) -->
-        <a href="YOUR_GITHUB_URL" class="social-link animate-hover-pop" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-        <!-- 2. LinkedIn (Using your handle) -->
-        <a href="https://linkedin.com/in/Alam Fatehin" class="social-link animate-hover-pop" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-        <!-- 3. X/Twitter (Using your handle) -->
-        <a href="https://x.com/AFatehin" class="social-link animate-hover-pop" target="_blank" title="Twitter / X"><i class="fab fa-x-twitter"></i></a>
-        <!-- 4. Kaggle (Recommended for DS/ML portfolios - Placeholder URL) -->
-        <a href="YOUR_KAGGLE_URL" class="social-link animate-hover-pop" target="_blank" title="Kaggle"><i class="fab fa-kaggle"></i></a>
+        <!-- LinkedIn Card -->
+        <a href="https://bd.linkedin.com/in/alam-fatehin-4b1314396" target="_blank" class="social-card animate-pop toggle-pbp" style="animation-delay: 0.8s;">
+          <i class="fab fa-linkedin-in social-icon"></i>
+          <h3 class="social-title">LinkedIn</h3>
+          <p class="card-followers">
+            <span class="follower-count">500+</span> Connections
+          </p>
+          <div class="follow-button">
+            <i class="fa-solid fa-user-plus"></i> Connect
+          </div>
+        </a>
+
+        <!-- X/Twitter Card -->
+        <a href="https://x.com/AFatehin" target="_blank" class="social-card animate-pop toggle-pbp" style="animation-delay: 1.0s;">
+          <i class="fab fa-x-twitter social-icon"></i>
+          <h3 class="social-title">X / Twitter</h3>
+          <p class="card-followers">
+            <span class="follower-count">500+</span> Followers
+          </p>
+          <div class="follow-button">
+            <i class="fa-solid fa-rss"></i> Follow Me
+          </div>
+        </a>
+        
+        <!-- Kaggle Card (Using Placeholder Data) -->
+        <a href="YOUR_KAGGLE_URL" target="_blank" class="social-card animate-pop toggle-pbp" style="animation-delay: 1.2s;">
+          <i class="fab fa-kaggle social-icon"></i>
+          <h3 class="social-title">Kaggle</h3>
+          <p class="card-followers">
+            <span class="follower-count">2</span> Silver Medals
+          </p>
+          <div class="follow-button">
+            <i class="fa-solid fa-microscope"></i> View Work
+          </div>
+        </a>
       </div>
+      <!-- END: SOCIAL CARDS GRID -->
+      
     </section>
 
     <!-- About -->
@@ -91,43 +133,52 @@
       </div>
     </section>
 
-    <!-- NEW: Projects/Research Section - Critical for showcasing ML/DS work -->
+    <!-- Projects/Research Section -->
+    <!-- This section content needs to be filled out with actual project details later -->
     <section id="projects" class="animate-fade-in">
-      <h2 class="section-title animate-slide-up toggle-outlines">Projects & Research</h2>
-      <div class="projects-grid">
-        
-        <!-- Project Card Template 1: Machine Learning Focus -->
-        <article class="project-card animate-slide-right toggle-pbp">
-          <h3 class="project-title">Enhanced XGBoost for Disease Prediction</h3>
-          <p class="project-description">Developed a robust predictive model using XGBoost combined with Bayesian Optimization for hyperparameter tuning. Achieved 95% accuracy on a complex medical dataset. (Remember to fill in your real project details!)</p>
-          <div class="project-tags">
-            <span class="project-tag">XGBoost</span>
-            <span class="project-tag">Python</span>
-            <span class="project-tag">Bayesian Opt.</span>
-          </div>
-          <div class="project-links">
-            <a href="LINK_TO_GITHUB_PROJECT_1" class="project-link" target="_blank"><i class="fab fa-github"></i> Code</a>
-            <a href="LINK_TO_REPORT_PROJECT_1" class="project-link" target="_blank"><i class="fas fa-file-alt"></i> Report</a>
-          </div>
-        </article>
+        <h2 class="section-title animate-slide-up toggle-outlines">Selected Projects</h2>
+        <div class="projects-grid">
+            
+            <!-- Project Card 1: Research Focus -->
+            <div class="project-card animate-slide-up toggle-pbp" style="animation-delay:0.2s">
+                <h3 class="project-title">Bayesian Optimization for XGboost</h3>
+                <p class="project-description">
+                    Utilized Bayesian optimization techniques to tune hyperparameters for XGBoost models, achieving significant improvements in prediction accuracy and stability on large datasets.
+                </p>
+                <div class="project-tags">
+                    <span class="project-tag">#MachineLearning</span>
+                    <span class="project-tag">#Optimization</span>
+                    <span class="project-tag">#Python</span>
+                </div>
+            </div>
 
-        <!-- Project Card Template 2: Interpretability Focus -->
-        <article class="project-card animate-slide-right toggle-pbp" style="animation-delay:0.2s">
-          <h3 class="project-title">SHAP Analysis for CatBoost Interpretability</h3>
-          <p class="project-description">Applied SHAP (SHapley Additive exPlanations) to a CatBoost model to interpret feature contributions, providing key insights into model decision-making processes.</p>
-          <div class="project-tags">
-            <span class="project-tag">CatBoost</span>
-            <span class="project-tag">SHAP</span>
-            <span class="project-tag">Data Viz</span>
-          </div>
-          <div class="project-links">
-            <a href="LINK_TO_GITHUB_PROJECT_2" class="project-link" target="_blank"><i class="fab fa-github"></i> Code</a>
-          </div>
-        </article>
-        
-        <!-- Add more <article class="project-card"> elements here for other projects! -->
+            <!-- Project Card 2: Interpretability Focus -->
+            <div class="project-card animate-slide-up toggle-pbp" style="animation-delay:0.4s">
+                <h3 class="project-title">SHAP Analysis Dashboard</h3>
+                <p class="project-description">
+                    Developed an interactive dashboard to visualize SHAP values, providing model explainability and insight into feature contributions for complex ML classifications.
+                </p>
+                <div class="project-tags">
+                    <span class="project-tag">#DataViz</span>
+                    <span class="project-tag">#SHAP</span>
+                    <span class="project-tag">#Research</span>
+                </div>
+            </div>
 
-      </div>
+            <!-- Project Card 3: Data Science Focus -->
+            <div class="project-card animate-slide-up toggle-pbp" style="animation-delay:0.6s">
+                <h3 class="project-title">E-Commerce Sentiment Analysis</h3>
+                <p class="project-description">
+                    Processed and analyzed millions of e-commerce reviews using NLP techniques to categorize customer sentiment (positive, negative, neutral) with high accuracy.
+                </p>
+                <div class="project-tags">
+                    <span class="project-tag">#NLP</span>
+                    <span class="project-tag">#Pandas</span>
+                    <span class="project-tag">#CatBoost</span>
+                </div>
+            </div>
+            
+        </div>
     </section>
 
     <!-- Skills -->
@@ -211,4 +262,4 @@
 
   <script src="script.js"></script>
 </body>
-</html>
+            </html>
