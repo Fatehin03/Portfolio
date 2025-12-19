@@ -3,263 +3,71 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fatehin Alam - Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <!-- Font Awesome: Added for professional social media icons (GitHub, LinkedIn, X/Twitter, Kaggle) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> 
-  <!-- Recommended: Using the Inter font is a modern default for clean readability -->
+  <title>Fatehin Alam | Researcher & ML Engineer</title>
+
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Three.js -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.152.2/build/three.min.js"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Custom Cursor -->
-  <div class="cursor"></div>
-  <div class="cursor-dot"></div>
 
-  <!-- Progress Bar -->
-  <div class="progress-bar"></div>
+<canvas id="bg"></canvas>
 
-  <!-- Particles Canvas -->
-  <canvas id="particles"></canvas>
+<header class="hero-container">
+  <div class="hero">
+    <h1>Fatehin Alam</h1>
+    <h2>Researcher • Machine Learning Engineer • Python Developer</h2>
+  </div>
+</header>
 
-  <!-- Animated Blobs With New Toggles -->
-  <div class="blob blob-1 toggle-rotate"></div>
-  <div class="blob blob-2 toggle-donut"></div>
-  <div class="blob blob-3 toggle-glare"></div>
+<section class="section glass">
+  <h3 class="section-title">About Me</h3>
+  <p>
+    I am a researcher and Computer Science & Engineering student with a strong focus on
+    Machine Learning, data analysis, and predictive modeling using Python.
+  </p>
+</section>
 
-  <!-- Navigation: Now includes the new 'Projects' section -->
-  <nav>
-    <button onclick="scrollToSection('hero')" class="nav-btn active">Home</button>
-    <button onclick="scrollToSection('about')" class="nav-btn">About</button>
-    <button onclick="scrollToSection('projects')" class="nav-btn">Projects</button>
-    <button onclick="scrollToSection('skills')" class="nav-btn">Skills</button>
-    <button onclick="scrollToSection('contact')" class="nav-btn">Contact</button>
-  </nav>
+<section class="section">
+  <h3 class="section-title">Research & Expertise</h3>
+  <div class="grid">
+    <div class="card">Machine Learning & Model Evaluation</div>
+    <div class="card">scikit-learn Pipelines</div>
+    <div class="card">pandas & NumPy Data Analysis</div>
+    <div class="card">RMSE • MAE • R² • Cross Validation</div>
+    <div class="card">Scientific Research & LaTeX</div>
+    <div class="card">Reproducible ML Systems</div>
+  </div>
+</section>
 
-  <!-- Main Content container (using <main> for better semantics) -->
-  <main class="container">
-    <!-- Hero Section -->
-    <section id="hero" class="hero animate-fade-in">
-      <div class="hero-card animate-slide-up toggle-lights">
-        <h1 class="hero-title" id="typewriter"></h1>
-        <p class="hero-subtitle">Computer Science Student</p>
+<section class="section glass">
+  <h3 class="section-title">Selected Projects</h3>
+  <ul class="projects">
+    <li>Machine Learning Prediction Systems</li>
+    <li>Bug Fix AI & Code Explainer</li>
+    <li>Al-Quran Web & Mobile Application</li>
+    <li>True Map – Ethical Mapping Platform</li>
+  </ul>
+</section>
 
-        <div class="hero-badges">
-          <span class="hero-badge animate-bounce toggle-sprinkles">🧠 ML Researcher</span>
-          <span class="hero-badge animate-bounce toggle-sprinkles" style="animation-delay:0.2s">📊 Data Enthusiast</span>
-          <span class="hero-badge animate-bounce toggle-sprinkles" style="animation-delay:0.4s">☕ Problem Solver</span>
-        </div>
-      </div>
+<section class="section glass">
+  <h3 class="section-title">Contact</h3>
+  <p>Email: <a href="mailto:alamfatehin@gmail.com">alamfatehin@gmail.com</a></p>
+  <p>GitHub: <a href="https://github.com/Fatehin03" target="_blank">github.com/Fatehin03</a></p>
+</section>
 
-      <div class="stats">
-        <div class="stat-card animate-pop toggle-pbp" style="animation-delay:0s">
-          <div class="stat-number" id="stat-projects">0</div>
-          <div class="stat-label">🚀 Projects</div>
-        </div>
-        <div class="stat-card animate-pop toggle-pbp" style="animation-delay:0.2s">
-          <div class="stat-number" id="stat-skills">0</div>
-          <div class="stat-label">⚡ Skills</div>
-        </div>
-        <div class="stat-card animate-pop toggle-pbp" style="animation-delay:0.4s">
-          <div class="stat-number" id="stat-research">0</div>
-          <div class="stat-label">⭐ Research</div>
-        </div>
-      </div>
-      
-      <!-- NEW: SOCIAL CARDS GRID - Links updated with user-provided URLs -->
-      <div class="social-cards-grid">
-        
-        <!-- GitHub Card -->
-        <a href="https://fatehin03.github.io" target="_blank" class="social-card animate-pop toggle-pbp" style="animation-delay: 0.6s;">
-          <i class="fab fa-github social-icon"></i>
-          <h3 class="social-title">GitHub</h3>
-          <p class="card-followers">
-            <span class="follower-count">80+</span> Repositories
-          </p>
-          <div class="follow-button">
-            <i class="fa-solid fa-code"></i> View Code
-          </div>
-        </a>
+<footer>
+  © 2025 Fatehin Alam · International Research Portfolio
+</footer>
 
-        <!-- LinkedIn Card -->
-        <a href="https://bd.linkedin.com/in/alam-fatehin-4b1314396" target="_blank" class="social-card animate-pop toggle-pbp" style="animation-delay: 0.8s;">
-          <i class="fab fa-linkedin-in social-icon"></i>
-          <h3 class="social-title">LinkedIn</h3>
-          <p class="card-followers">
-            <span class="follower-count">500+</span> Connections
-          </p>
-          <div class="follow-button">
-            <i class="fa-solid fa-user-plus"></i> Connect
-          </div>
-        </a>
+<button id="themeToggle">🌙</button>
 
-        <!-- X/Twitter Card -->
-        <a href="https://x.com/AFatehin" target="_blank" class="social-card animate-pop toggle-pbp" style="animation-delay: 1.0s;">
-          <i class="fab fa-x-twitter social-icon"></i>
-          <h3 class="social-title">X / Twitter</h3>
-          <p class="card-followers">
-            <span class="follower-count">500+</span> Followers
-          </p>
-          <div class="follow-button">
-            <i class="fa-solid fa-rss"></i> Follow Me
-          </div>
-        </a>
-        
-        <!-- Kaggle Card (Using Placeholder Data) -->
-        <a href="YOUR_KAGGLE_URL" target="_blank" class="social-card animate-pop toggle-pbp" style="animation-delay: 1.2s;">
-          <i class="fab fa-kaggle social-icon"></i>
-          <h3 class="social-title">Kaggle</h3>
-          <p class="card-followers">
-            <span class="follower-count">2</span> Silver Medals
-          </p>
-          <div class="follow-button">
-            <i class="fa-solid fa-microscope"></i> View Work
-          </div>
-        </a>
-      </div>
-      <!-- END: SOCIAL CARDS GRID -->
-      
-    </section>
-
-    <!-- About -->
-    <section id="about" class="animate-fade-in">
-      <h2 class="section-title animate-slide-up toggle-outlines">About Me</h2>
-      <div class="content-card animate-slide-up toggle-glare" style="animation-delay:0.2s">
-        <p>
-          I'm a passionate Computer Science student specializing in Machine Learning and Data Science. 
-          I love developing ML models, analyzing data, and creating meaningful visualizations. 
-          My work includes research projects with CatBoost, XGBoost, and SHAP analysis for model interpretability. 
-          I enjoy collaborating with peers on research projects and exploring new technologies.
-        </p>
-      </div>
-    </section>
-
-    <!-- Projects/Research Section -->
-    <!-- This section content needs to be filled out with actual project details later -->
-    <section id="projects" class="animate-fade-in">
-        <h2 class="section-title animate-slide-up toggle-outlines">Selected Projects</h2>
-        <div class="projects-grid">
-            
-            <!-- Project Card 1: Research Focus -->
-            <div class="project-card animate-slide-up toggle-pbp" style="animation-delay:0.2s">
-                <h3 class="project-title">Bayesian Optimization for XGboost</h3>
-                <p class="project-description">
-                    Utilized Bayesian optimization techniques to tune hyperparameters for XGBoost models, achieving significant improvements in prediction accuracy and stability on large datasets.
-                </p>
-                <div class="project-tags">
-                    <span class="project-tag">#MachineLearning</span>
-                    <span class="project-tag">#Optimization</span>
-                    <span class="project-tag">#Python</span>
-                </div>
-            </div>
-
-            <!-- Project Card 2: Interpretability Focus -->
-            <div class="project-card animate-slide-up toggle-pbp" style="animation-delay:0.4s">
-                <h3 class="project-title">SHAP Analysis Dashboard</h3>
-                <p class="project-description">
-                    Developed an interactive dashboard to visualize SHAP values, providing model explainability and insight into feature contributions for complex ML classifications.
-                </p>
-                <div class="project-tags">
-                    <span class="project-tag">#DataViz</span>
-                    <span class="project-tag">#SHAP</span>
-                    <span class="project-tag">#Research</span>
-                </div>
-            </div>
-
-            <!-- Project Card 3: Data Science Focus -->
-            <div class="project-card animate-slide-up toggle-pbp" style="animation-delay:0.6s">
-                <h3 class="project-title">E-Commerce Sentiment Analysis</h3>
-                <p class="project-description">
-                    Processed and analyzed millions of e-commerce reviews using NLP techniques to categorize customer sentiment (positive, negative, neutral) with high accuracy.
-                </p>
-                <div class="project-tags">
-                    <span class="project-tag">#NLP</span>
-                    <span class="project-tag">#Pandas</span>
-                    <span class="project-tag">#CatBoost</span>
-                </div>
-            </div>
-            
-        </div>
-    </section>
-
-    <!-- Skills -->
-    <section id="skills" class="animate-fade-in">
-      <h2 class="section-title animate-slide-up toggle-outlines">Skills</h2>
-
-      <div class="skills-grid">
-        <div class="skill-card animate-slide-left toggle-rotate">
-          <div class="skill-header">
-            <div class="skill-icon">💻</div>
-            <h3 class="skill-title">Programming</h3>
-          </div>
-          <div class="skill-items">
-            <span class="skill-tag animate-tag">Python</span>
-            <span class="skill-tag animate-tag">C</span>
-            <span class="skill-tag animate-tag">Java</span>
-            <span class="skill-tag animate-tag">JavaScript</span>
-          </div>
-        </div>
-
-        <div class="skill-card animate-slide-left toggle-sprinkles" style="animation-delay:0.2s">
-          <div class="skill-header">
-            <div class="skill-icon">🧠</div>
-            <h3 class="skill-title">Machine Learning</h3>
-          </div>
-          <div class="skill-items">
-            <span class="skill-tag animate-tag">CatBoost</span>
-            <span class="skill-tag animate-tag">XGBoost</span>
-            <span class="skill-tag animate-tag">Bayesian Optimization</span>
-            <span class="skill-tag animate-tag">SHAP Analysis</span>
-          </div>
-        </div>
-
-        <div class="skill-card animate-slide-left toggle-lights" style="animation-delay:0.4s">
-          <div class="skill-header">
-            <div class="skill-icon">📊</div>
-            <h3 class="skill-title">Data Science</h3>
-          </div>
-          <div class="skill-items">
-            <span class="skill-tag animate-tag">Pandas</span>
-            <span class="skill-tag animate-tag">NumPy</span>
-            <span class="skill-tag animate-tag">Matplotlib</span>
-            <span class="skill-tag animate-tag">Seaborn</span>
-          </div>
-        </div>
-
-        <div class="skill-card animate-slide-left toggle-donut" style="animation-delay:0.6s">
-          <div class="skill-header">
-            <div class="skill-icon">📈</div>
-            <h3 class="skill-title">Visualization</h3>
-          </div>
-          <div class="skill-items">
-            <span class="skill-tag animate-tag">Charts</span>
-            <span class="skill-tag animate-tag">Heatmaps</span>
-            <span class="skill-tag animate-tag">Distribution Plots</span>
-            <span class="skill-tag animate-tag">Data Cleaning</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="animate-fade-in">
-      <h2 class="section-title animate-slide-up toggle-outlines">Get In Touch</h2>
-      <div class="content-card animate-slide-up toggle-glare" style="animation-delay:0.2s; text-align:center;">
-        <div class="contact-icon">📧</div>
-        <p class="contact-text">Let's connect and collaborate!</p>
-        <p class="contact-subtext">Reach out for research opportunities or project collaborations.</p>
-        <!-- Contact Button with mailto link -->
-        <a href="mailto:YOUR_EMAIL_ADDRESS" class="contact-button animate-hover-pop">
-          <i class="fas fa-paper-plane"></i> Say Hello
-        </a>
-      </div>
-    </section>
-  </main>
-  
-  <!-- Footer (Semantic element for copyright/credits) -->
-  <footer>
-    <p>&copy; 2025 Fatehin Alam. Crafted with <i class="fas fa-heart"></i> and Code.</p>
-  </footer>
-
-  <script src="script.js"></script>
+<!-- JS -->
+<script src="script.js"></script>
 </body>
-            </html>
+</html>
